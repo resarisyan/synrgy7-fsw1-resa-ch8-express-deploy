@@ -12,11 +12,10 @@ export class RedisRepository<T> {
   private async initializeRedisClient(): Promise<void> {
     try {
       this.redisClient = createClient({
-        url: 'redis-13628.c10.us-east-1-2.ec2.redns.redis-cloud.com:13628',
         password: 'ojg6xrNo8KzQAhR0YLF7z4qscM8nGFnW',
-        username: 'default',
         socket: {
-          connectTimeout: 1000
+          host: 'redis-13628.c10.us-east-1-2.ec2.redns.redis-cloud.com',
+          port: 13628
         }
       });
       this.redisClient.on('error', (err) =>
