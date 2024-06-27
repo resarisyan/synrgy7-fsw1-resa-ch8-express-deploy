@@ -13,6 +13,7 @@ export class RedisRepository<T> {
     try {
       this.redisClient = createClient({
         password: 'ojg6xrNo8KzQAhR0YLF7z4qscM8nGFnW',
+        database: 0,
         socket: {
           host: 'redis-13628.c10.us-east-1-2.ec2.redns.redis-cloud.com',
           port: 13628
